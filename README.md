@@ -2,7 +2,7 @@
 
 > Buildless for the Command Line ([Docs][0])
 
-**Latest release:** `1.0.0-beta3`
+**Latest release:** `1.0.0-beta4`
 
 ![Output of buildless --help][helpimg]
 
