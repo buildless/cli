@@ -1,13 +1,59 @@
 name: Feature request
 description: Create a new feature request
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Please describe the feature you want for Buildless, and please check if there is already an existing issue.
   - type: textarea
     attributes:
       label: Feature description
-      placeholder: Tell us about your idea, feature, or module
+      placeholder: Provide a simple description
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        Additional Markdown content can be added here, including awesome charts and stuff
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Component(s) affected
+      multiple: true
+      options:
+        - N/A
+        - Buildless CLI
+        - Buildless Agent
+        - Buildless Cloud
+        - Buildless Plugin for Gradle
+        - Buildless Plugin for Jetbrains IDEs
+        - Documentation
+        - Other
+    validations:
+      required: false
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      description: Language runtime(s) where the problem occurs.
+      multiple: true
+      options:
+        - N/A (Default)
+        - JavaScript
+        - JVM
+        - C/C++
+        - Swift
+        - Rust
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tool
+      description: Tool(s) where the problem occurs
+      multiple: true
+      options:
+        - N/A (Default)
+        - Gradle
+        - Maven
+        - Bazel
+        - Turbo
+        - SCCache
+        - Other
+    validations:
+      required: false
