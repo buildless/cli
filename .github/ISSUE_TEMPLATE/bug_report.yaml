@@ -1,0 +1,124 @@
+name: Bug Report
+description: File a bug report
+
+assignees:
+  - "@elide-dev/engineering"
+
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue, please review the task list below before submitting the issue. Your issue report will be closed if the issue is incomplete and the below tasks not completed.
+
+        NOTE: If you are unsure about something and the issue is more of a question a better place to ask questions is on Github Discussions :arrow_up:, [Stack Overflow](https://stackoverflow.com/tags/buildless) or [Discord](https://elide.dev/discord).
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A concise description of what you expected to happen.
+      placeholder: Tell us what should happen
+    validations:
+      required: false
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behaviour
+      description: A concise description of what you're experiencing.
+      placeholder: Tell us what happens instead
+    validations:
+      required: false
+  - type: textarea
+    id: stacktrace
+    attributes:
+      label: Stacktrace
+      description: If this bug results in an exception, include the stacktrace here.
+      placeholder: Exception stacktrace
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. In this environment...
+        2. With this config...
+        3. Run '...'
+        4. See error...
+    validations:
+      required: false
+  - type: textarea
+    id: env_info
+    attributes:
+      label: Environment Information
+      description: Environment information where the problem occurs.
+      placeholder: |
+        - Operating System:
+        - Architecture:
+    validations:
+      required: false
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Component(s) affected
+      multiple: true
+      options:
+        - N/A
+        - Buildless CLI
+        - Buildless Agent
+        - Buildless Cloud
+        - Buildless Plugin for Gradle
+        - Buildless Plugin for Jetbrains IDEs
+        - Documentation
+        - Other
+    validations:
+      required: false
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      description: Language runtime(s) where the problem occurs.
+      multiple: true
+      options:
+        - N/A (Default)
+        - JavaScript
+        - JVM
+        - C/C++
+        - Swift
+        - Rust
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tool
+      description: Tool(s) where the problem occurs
+      multiple: true
+      options:
+        - N/A (Default)
+        - Gradle
+        - Maven
+        - Bazel
+        - Turbo
+        - SCCache
+        - Other
+    validations:
+      required: false
+  - type: input
+    id: example
+    attributes:
+      label: Example Application
+      description: Example application link.
+      placeholder: |
+        Link to GitHub repository with an example that reproduces the issue
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Buildless version
+    validations:
+      required: false
