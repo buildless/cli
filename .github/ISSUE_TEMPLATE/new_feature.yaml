@@ -7,10 +7,6 @@ body:
       placeholder: Provide a simple description
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: |
-        Additional Markdown content can be added here, including awesome charts and stuff
   - type: dropdown
     id: component
     attributes:
